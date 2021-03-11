@@ -1,4 +1,5 @@
 import 'package:appresponsive2_app/breakpoints.dart';
+import 'package:appresponsive2_app/pages/home/sections/top_section.dart';
 import 'package:appresponsive2_app/pages/home/widget/app_bar/mobile_app_bar.dart';
 import 'package:appresponsive2_app/pages/home/widget/app_bar/web_app_bar.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +19,11 @@ class HomePage extends StatelessWidget {
         body: Align(alignment: Alignment.center,
           child: ConstrainedBox(
             constraints: BoxConstraints(maxHeight: 1400),
-            child: ListView(),
+            child: ListView(
+              children: [
+                TopSection(),
+              ],
+            ),
           ),
         ),
         
