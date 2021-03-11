@@ -8,6 +8,7 @@ class WebAppBarResponsiveContent extends StatelessWidget {
         print('biggest ${constraints.biggest} smallest ${constraints.smallest}');
         return Row(
           children: [
+            SizedBox(width: 4),
             Expanded(
               child: Container(
                 height: 45,
@@ -17,19 +18,30 @@ class WebAppBarResponsiveContent extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    IconButton(icon: Icon(Icons.search), onPressed: (){}),
+                    IconButton(icon: Icon(Icons.search), onPressed: (){}, color: Colors.grey[500],),
                     Expanded(
                       child: TextField(
                         decoration: InputDecoration(
                           border: InputBorder.none,
                           hintText: 'Pesquise alguma coisa aqui',
+                          isCollapsed: true,
                         ),
                       ),
                     )
                   ],
                 ),
               ),
-            )
+            ),
+            if (constraints.maxWidth >= 400) ...[
+              SizedBox(width: 32,),
+              FlatButton(onPressed: (){}, child: Text('Aprender'),
+                textColor: Colors.white,),
+            ],
+            if(constraints.maxWidth >= 500 )...[
+              FlatButton(onPressed: (){}, child: Text('Flutter'),
+                textColor: Colors.white,)
+            ]
+
 
           ],
         );
