@@ -1,3 +1,4 @@
+import 'package:appresponsive2_app/pages/home/widget/app_bar/web_app_bar_responsive_content.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,7 @@ class WebAppBar extends StatelessWidget {
           const SizedBox(
             width: 32,
           ),
-          Expanded(child: Container()),
+          WebAppBarResponsiveContent(),
           IconButton(icon: Icon(Icons.shopping_cart), onPressed: () {}),
           const SizedBox(width: 24),
           SizedBox(
