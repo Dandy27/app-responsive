@@ -9,6 +9,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
       return Scaffold(
+        backgroundColor: Colors.black,
         appBar: constraints.maxWidth < mobileBreakpoint
             ? PreferredSize(
                 child: MobileAppBar(),

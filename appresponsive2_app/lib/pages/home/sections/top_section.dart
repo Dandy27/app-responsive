@@ -104,7 +104,39 @@ class TopSection extends StatelessWidget {
         );
       }
 
-      return Container(color: Colors.pink,);
+      return Column(
+        children: [
+          AspectRatio(
+            aspectRatio: 3.4,
+            child: Image.network(
+              'https://images.pexels.com/photos/572056/pexels-photo-572056.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+              fit: BoxFit.cover,
+            ),
+          ),
+          Padding(padding: const EdgeInsets.all(16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Aprenda Flutter com este curso',
+                style: TextStyle(
+                    fontSize: 35,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
+              ),
+              const SizedBox(
+                height: 8,
+              ),
+              Text(
+                'Bora Aprender Flutter com o professor Daniel Ciolfi ! Cursos por apenas R\$22,90.Qualidade Garantida',
+                style: TextStyle(fontSize: 15, color: Colors.white),
+              ),
+              const SizedBox(height: 16),
+              CustomSearchField()
+            ],
+          ),)
+        ],
+      );
     });
   }
 }
