@@ -1,8 +1,9 @@
 import 'package:appresponsive2_app/pages/home/home_page.dart';
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(DevicePreview(builder: (_) => MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -16,6 +17,8 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
+      builder: DevicePreview.appBuilder,
+      locale: DevicePreview.locale(context),
       home: HomePage(),
     );
   }
